@@ -1,0 +1,192 @@
+<style>
+    .mobile .footer { margin-top: -2px; }
+     h3 { font-size: 40px !important; line-height: 40px !important;}
+     h1 { font-size: 60px !important; line-height: 1 !important; }
+    .sp-offer { font-size: 35px !important; margin-bottom: 60px; }
+    .form-sec:after { clip-path: polygon(0% 0%, 100% 0%, 170% 0%, 0% 70%); -webkit-clip-path: polygon(0% 0%, 100% 0%, 170% 0%, 0% 70%); }
+    .mobile .form-sec form { margin-top: 30px !important; }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SugarLoaf Games</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi, user-scalable=0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="cRebQNQBKoTNNWoq7i7RDWNJxllIBgkFALOhxemT">
+
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <link rel="stylesheet" type="text/css" href="dennys_style.css">
+
+    <!-- Smart Look Heat Map Scripts -->
+    <script type='text/javascript'>
+        window.smartlook||(function(d) {
+            var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+            var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+            c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', '42e87b7928ce8f9f13f9f5acf562ab6a5ab89f3c');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158748514-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158748514-1');
+    </script>
+
+</head>
+<body>
+<div id="load"></div>
+<div id="contents">
+    <div class="desktop">
+        <div class="desk-box">
+            <p class="bold mb-2">This Page is<br>Mobile-Only</p>
+            <span class="small-text m-0">Visit on your phone to access offer.</span>
+        </div>
+        <div class="img-wrapper">
+            <img src="img/ic-computer.svg" alt="computer" class="mx-2" />
+            <img src="img/ic-mobile.svg" alt="mobile" class="mx-2" />
+        </div>
+    </div>
+    <main>
+            <section class="text-center">
+        <div class="container">
+            <a href="" class="logo d-block"><img src="/img/dennys_logo.png" style="max-width: 40%" alt="sugar-loaf" /></a>
+        </div>
+                    <div class="form-sec" >
+            <div class="container">
+                <h3 class="bold text-white">GET YOUR</h3>
+                <h1 class="bold text-white">FREE PLAYS <br/> NOW!</h1>
+                <form id="registrationForm" method="POST" action="http://claw.game/dennys"  class="text-left" novalidate>
+                    <input type="hidden" name="_token" value="cRebQNQBKoTNNWoq7i7RDWNJxllIBgkFALOhxemT">                    <div class="form-group">
+                        <label class="control-label">Your First Name</label>
+                        <input type="text"  name="firstName" class="form-control "  value="" />
+                                            </div>
+                    <div class="form-group">
+                        <label class="control-label">Your Last Name</label>
+                        <input type="text"  name="lastName" class="form-control "  value="" />
+                                            </div>
+                    <div class="form-group">
+                        <label class="control-label">Your Email</label>
+                        <input type="email" name="email" class="form-control "  value="" />
+                                            </div>
+                    <input type="hidden" id="source" name="source" value="DIRECT"/>
+                    <input type="hidden" id="brand" name="brand" value="DENNYS" />
+                    <input type="hidden" id="payee" name="payee" value=""/>
+                    <input type="hidden" name="utm_source" value="">
+                    <input type="hidden" name="utm_medium" value="">
+                    <input type="hidden" name="utm_campaign" value="">
+
+                    <button type="submit" id="myButton" class="bold border-0">
+                        <!--<span class="mr-2"> <img src="/img/unlock.svg" /></span> -->
+                        REDEEM MY FREE PLAYS
+                    </button>
+                    <div class="form-check mt-3 p-0">
+                        <label class="form-check-label text-white" for="disclaimer">
+                            By clicking "I want my FREE PLAYS" box, I certify that I: (a) am 18+ years of age; (b) have read and agree to the Sugar Loaf Games <a href="/privacy" target="_blank" class="text-white">Privacy Policy</a> and <a href="/terms" target="_blank" class="text-white">Terms and Conditions</a>; and (c) agree to receive email marketing from Sugar Loaf Games and its third-party marketing partners.
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+            <div class="footer" style="padding-top: 180px;background-color: #27CEF4; position: absolute; width: 100%; z-index: -2">
+        <!--<div class="row align-items-center justify-content-center">
+            <div class="col-12">-->
+                <img class="mobile-img d-block mx-auto" src="/img/sugar_loaf.svg" alt="sugar_loaf" />
+        <!--    </div>
+        </div>-->
+        <div class="d-flex justify-content-center cms-link mt-5">
+            <a href="/terms" target="_blank" style="color: #000000">Terms & Conditions</a><span class="mx-1">|</span>
+            <a href="/privacy" target="_blank" style="color: #000000">Privacy Policy</a>
+        </div>
+        <p class="text-center mb-0" style="color: #000000">Copyright &copy; Digital Claw, LLC <br/>
+            2026 All Rights Reserved.
+        </p>
+    </div>
+    
+    </main>
+
+</div>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="popper.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery.validate.min.js"></script>
+<script type="text/javascript" async src="p7jzem24.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+
+        <script type="text/javascript">
+            //Form validation
+            $(document).ready(function(){
+
+                //^[a-zA-Z0-9]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,4}
+                jQuery.validator.addMethod(
+                    "regex",
+                    function(value, element, regexp) {
+                        if (regexp.constructor != RegExp)
+                            regexp = new RegExp(regexp);
+                        else if (regexp.global)
+                            regexp.lastIndex = 0;
+                        return this.optional(element) || regexp.test(value);
+                    },"invalid value."
+                )
+
+                //Get Parameter from the URL if exists
+                document.getElementById("source").value = getParameterByName('source');
+                document.getElementById("payee").value = getParameterByName('f');
+
+                $('#registrationForm').validate({
+                    highlight: function (element) {
+                        $(element).parent().addClass("has-error");
+                    },
+                    unhighlight: function (element) {
+                        $(element).parent().removeClass("has-error");
+                    },
+                    rules: {
+                        firstName: {
+                            required: true,
+                            maxlength: 255
+                        },
+                        lastName: {
+                            required: true,
+                            maxlength: 255
+                        },
+                        email: {
+                            required: true,
+                            email: true,
+                            maxlength: 255,
+                            regex: /^[a-zA-Z0-9]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,4}$/
+                        },
+                    },
+                    messages:{
+                        firstName: "Please enter valid first name.",
+                        lastName: "Please enter valid last name.",
+                        email: "Please enter valid email.",
+                    },
+                    errorPlacement: function(error, element) {
+                        var placement = $(element).data('error');
+                        if (placement) {
+                            $(placement).append(error)
+                        } else {
+                            element.parent().append(error);
+                        }
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
+
