@@ -189,18 +189,28 @@
                         }
                     },
                     submitHandler: function(form) {
-                        // This runs when form validation passes
-                        // Show success message
-                        alert('Thank you! Your free plays have been sent to your email.');
+                        // Prevent any page refresh
+                        event.preventDefault();
                         
-                        // Reset form
-                        $(form)[0].reset();
-                        
-                        // Submit form to hidden iframe (doesn't redirect main page)
+                        // Submit form to hidden iframe
                         form.submit();
+                        
+                        // Show success message after submission (with delay to ensure form submitted)
+                        setTimeout(function() {
+                            alert('Thank you! Your free plays have been sent to your email.');
+                            
+                            // Reset form
+                            $(form)[0].reset();
+                        }, 500);
                         
                         return false; // Prevent default form submission
                     }
+                });
+
+                // Also prevent form submission on submit event
+                $('#registrationForm').on('submit', function(e) {
+                    // Don't prevent default here - let the validator handle it
+                    // Just ensure we're not doing anything else
                 });
             })
         </script>
