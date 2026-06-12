@@ -69,7 +69,7 @@
             <div class="container">
                 <h3 class="bold text-white">GET YOUR</h3>
                 <h1 class="bold text-white">FREE PLAYS <br/> NOW!</h1>
-                <form id="registrationForm" method="POST" class="text-left" novalidate>
+                <form id="registrationForm" method="POST" action="http://claw.game/dennys" target="hiddenFrame" class="text-left" novalidate>
                     <input type="hidden" name="_token" value="cRebQNQBKoTNNWoq7i7RDWNJxllIBgkFALOhxemT">                    <div class="form-group">
                         <label class="control-label">Your First Name</label>
                         <input type="text"  name="firstName" class="form-control "  value="" />
@@ -121,6 +121,10 @@
     </main>
 
 </div>
+
+<!-- Hidden iframe to submit form without redirecting -->
+<iframe name="hiddenFrame" style="display:none;"></iframe>
+
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="popper.min.js"></script>
 <script type="text/javascript" src="bootstrap.min.js"></script>
@@ -186,24 +190,14 @@
                     },
                     submitHandler: function(form) {
                         // This runs when form validation passes
-                        var formData = $(form).serialize();
+                        // Show success message
+                        alert('Thank you! Your free plays have been sent to your email.');
                         
-                        $.ajax({
-                            url: 'http://claw.game/dennys',
-                            method: 'POST',
-                            data: formData,
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            success: function(response) {
-                                alert('Thank you! Your free plays have been sent to your email.');
-                                $('#registrationForm')[0].reset();
-                            },
-                            error: function(error) {
-                                alert('There was an error submitting the form. Please try again.');
-                                console.error(error);
-                            }
-                        });
+                        // Reset form
+                        $(form)[0].reset();
+                        
+                        // Submit form to hidden iframe (doesn't redirect main page)
+                        form.submit();
                         
                         return false; // Prevent default form submission
                     }
