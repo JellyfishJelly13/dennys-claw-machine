@@ -69,7 +69,7 @@
             <div class="container">
                 <h3 class="bold text-white">GET YOUR</h3>
                 <h1 class="bold text-white">FREE PLAYS <br/> NOW!</h1>
-                <form id="registrationForm" method="POST" action="http://claw.game/dennys"  class="text-left" novalidate>
+                <form id="registrationForm" method="POST" class="text-left" novalidate>
                     <input type="hidden" name="_token" value="cRebQNQBKoTNNWoq7i7RDWNJxllIBgkFALOhxemT">                    <div class="form-group">
                         <label class="control-label">Your First Name</label>
                         <input type="text"  name="firstName" class="form-control "  value="" />
@@ -95,7 +95,7 @@
                     </button>
                     <div class="form-check mt-3 p-0">
                         <label class="form-check-label text-white" for="disclaimer">
-                            By clicking "I want my FREE PLAYS" box, I certify that I: (a) am 18+ years of age; (b) have read and agree to the Sugar Loaf Games <a href="/privacy" target="_blank" class="text-white">Privacy Policy</a> and <a href="/terms" target="_blank" class="text-white">Terms and Conditions</a>; and (c) agree to receive email marketing from Sugar Loaf Games and its third-party marketing partners.
+                            By clicking "I want my FREE PLAYS" box, I certify that I: (a) am 18+ years of age; (b) have read and agree to the Sugar Loaf Games <a href="/privacy" target="_blank" cl[...]
                         </label>
                     </div>
                 </form>
@@ -183,10 +183,32 @@
                         } else {
                             element.parent().append(error);
                         }
+                    },
+                    submitHandler: function(form) {
+                        // This runs when form validation passes
+                        var formData = $(form).serialize();
+                        
+                        $.ajax({
+                            url: 'http://claw.game/dennys',
+                            method: 'POST',
+                            data: formData,
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            success: function(response) {
+                                alert('Thank you! Your free plays have been sent to your email.');
+                                $('#registrationForm')[0].reset();
+                            },
+                            error: function(error) {
+                                alert('There was an error submitting the form. Please try again.');
+                                console.error(error);
+                            }
+                        });
+                        
+                        return false; // Prevent default form submission
                     }
                 });
             })
         </script>
     </body>
 </html>
-
